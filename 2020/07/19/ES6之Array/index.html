@@ -6,15 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>ES6之Array | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、ES6之Array篇 1.数组有几种遍历模式呢?答:最常用用的,for循环以及forEach循环定义：foreach又叫做增强for循环,相当于for循环的简化版，因此在一些较复杂的循环中不适用。特点：foreach在循环次数未知或者计算起来较复杂的情况下效率比for循环高。  那么他们之间都可以遍历数组，但是有什么区别呢?1.for循环有break和continue,但是forEach没有2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6之Array">
+<meta property="og:url" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、ES6之Array篇 1.数组有几种遍历模式呢?答:最常用用的,for循环以及forEach循环定义：foreach又叫做增强for循环,相当于for循环的简化版，因此在一些较复杂的循环中不适用。特点：foreach在循环次数未知或者计算起来较复杂的情况下效率比for循环高。  那么他们之间都可以遍历数组，但是有什么区别呢?1.for循环有break和continue,但是forEach没有2">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/01.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/02.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/03.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/04.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/05.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/06.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/07.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/08.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/09.png">
+<meta property="article:published_time" content="2020-07-19T11:16:30.000Z">
+<meta property="article:modified_time" content="2020-07-22T12:26:11.679Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/01.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,100 +164,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-ES6之Array" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/22/Promise/">Promise</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/22/Promise/" class="archive-article-date">
-  	<time datetime="2020-07-22T12:27:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、Promise基本语法"><a href="#一、Promise基本语法" class="headerlink" title="一、Promise基本语法"></a>一、Promise基本语法</h2><p>new Promise( function(resolve, reject) {…} );<br>通过创建 Promise 对象开启一个异步操作的过程，一般用几步完成多次异步操作：</p>
-<p>new Promise(fn) 返回一个Promise对象</p>
-<ul>
-<li><strong>1.在fn 中指定异步等处理</strong></li>
-<li><strong>2.处理结果正常的话，调用resolve(处理结果值)</strong></li>
-<li><strong>3.处理结果错误的话，调用reject(Error对象)</strong><br>我们根据这个语法尝试自己封装一个 Ajax 的方法：<br><img src="/2020/07/22/Promise/01.png" alt><br>getURL 只有在通过XHR取得结果状态为200时才会调用 resolve ，也就是只有数据取得成功时，而其他情况（取得失败）时则会调用 reject 方法。</li>
-</ul>
-<p><strong>resolve(req.responseText) 在response的内容中加入了参数。 resolve方法的参数并没有特别的规则，基本上把要传给回调函数参数放进去就可以了。 ( then 方法可以接收到这个参数值)</strong></p>
-<p><strong>在这里必须说明下 Promise 内部是有状态的(pending、fulfilled、rejected)，Promise 对象根据状态来确定执行哪个方法。Promise 在实例化的时候状态是默认 pending 的，当异步操作是完成的，状态会被修改为 fulfilled，如果异步操作遇到异常，状态会被修改为 rejected，可以通过下面两幅图来看下状态的走向：</strong><br><img src="/2020/07/22/Promise/02.png" alt><br><strong>！！状态转化是单向的，不可逆转，已经确定的状态（fulfilled/rejected）无法转回初始状态（pending），而且只能是从 pending 到 fulfilled 或者 rejected</strong></p>
-<h2 id="二、Promise-prototype-then"><a href="#二、Promise-prototype-then" class="headerlink" title="二、Promise.prototype.then()"></a>二、Promise.prototype.then()</h2><p><strong>基本语法</strong>:promise.then(onFulfilled, onRejected)<br>例:<br><img src="/2020/07/22/Promise/03.png" alt><br>这段代码创建一个 Promise 对象，定义了处理 onFulfilled 和 onRejected 的函数（handler），然后返回这个 Promise 对象。</p>
-<p>这个 Promise 对象会在变为 resolve 或者 reject 的时候分别调用相应注册的回调函数。</p>
-<ul>
-<li><strong>1.当 handler 返回一个正常值的时候，这个值会传递给 Promise 对象的 onFulfilled 方法。</strong></li>
-<li><strong>2.定义的 handler 中产生异常的时候，这个值则会传递给 Promise 对象的 onRejected 方法。</strong></li>
-</ul>
-<h2 id="三、Promise-resolve"><a href="#三、Promise-resolve" class="headerlink" title="三、Promise.resolve()"></a>三、Promise.resolve()</h2><p>一般情况下我们都会使用 new Promise() 来创建 Promise 对象，但是除此之外我们也可以使用其他方法。<br>在这里，我们将会学习如何使用 <strong>Promise.resolve</strong> 和 <strong>Promise.reject</strong> 这两个方法。<br>静态方法 <strong>Promise.resolve(value)</strong> 可以认为是 <strong>new Promise()</strong> 方法的快捷方式。<br>比如 Promise.resolve(42) 可以认为是以下代码的语法糖。<br><img src="/2020/07/22/Promise/04.png" alt><br>在这段代码中的 resolve(42) 会让这个 Promise 对象立即进入确定（即resolved）状态，并将 42 传递给后面 then 里所指定的 onFulfilled 函数。</p>
-<p>方法 Promise.resolve(value) 的返回值也是一个 Promise 对象，所以我们可以像下面那样接着对其返回值进行 .then 调用。<br><img src="/2020/07/22/Promise/05.png" alt><br><strong>Promise.resolve 作为 new Promise() 的快捷方式，在进行 Promise 对象的初始化或者编写测试代码的时候都非常方便。</strong></p>
-<h2 id="四、Promise-reject"><a href="#四、Promise-reject" class="headerlink" title="四、Promise.reject()"></a>四、Promise.reject()</h2><p>Promise.reject(error) 是和 Promise.resolve(value) 类似的静态方法，是 new Promise() 方法的快捷方式。<br>比如 <strong>Promise.reject(new Error(“出错了”))</strong> 就是下面代码的语法糖形式。<br><img src="/2020/07/22/Promise/06.png" alt><br>这段代码的功能是调用该Promise 对象通过then指定的 onRejected 函数，并将错误（Error）对象传递给这个 onRejected 函数。=&gt; <strong>Promise.reject(new Error(‘BOOM!’))</strong></p>
-<h2 id="五、Promise-prototype-catch"><a href="#五、Promise-prototype-catch" class="headerlink" title="五、Promise.prototype.catch()"></a>五、Promise.prototype.catch()</h2><p>捕获异常是程序质量保障最基本的要求，可以使用 Promise 对象的 catch 方法来捕获异步操作过程中出现的任何异常。<br><strong>基本语法:</strong><br><img src="/2020/07/22/Promise/07.png" alt><br><strong>示例:</strong><br><img src="/2020/07/22/Promise/08.png" alt></p>
-<h2 id="六、Promise-all"><a href="#六、Promise-all" class="headerlink" title="六、Promise.all()"></a>六、Promise.all()</h2><p><strong>基本语法</strong>:Promise.all(promiseArray)<br><strong>示例</strong><br><img src="/2020/07/22/Promise/09.png" alt><br>Promise.all 生成并返回一个新的 Promise 对象，所以它可以使用 Promise 实例的所有方法。参数传递promise数组中所有的 Promise 对象都变为resolve的时候，该方法才会返回， 新创建的 Promise 则会使用这些 promise 的值。<br>如果参数中的任何一个promise为reject的话，则整个Promise.all调用会<strong>立即终止</strong>，并返回一个reject的新的 Promise 对象。<br>由于参数数组中的每个元素都是由 Promise.resolve 包装（wrap）的，所以Paomise.all 可以处理不同类型的 promose对象。</p>
-<h2 id="七、Promise-race"><a href="#七、Promise-race" class="headerlink" title="七、Promise.race()"></a>七、Promise.race()</h2><p><strong>基本语法</strong>:Promise.race(promiseArray)<br><strong>示例</strong><br><img src="/2020/07/22/Promise/10.png" alt><br>Promise.race 生成并返回一个新的 Promise 对象。</p>
-<p>参数 promise 数组中的任何一个 Promise 对象如果变为 resolve 或者 reject 的话， 该函数就会返回，并使用这个 Promise 对象的值进行 resolve 或者 reject。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/22/Promise/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ES6之Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/19/ES6%E4%B9%8BArray/">ES6之Array</a>
+    <h1 class="article-title" itemprop="name">
+      ES6之Array
     </h1>
   
 
@@ -282,6 +210,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -289,16 +238,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/19/ES6%E4%B9%8BArray/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/07/19/ES6%E4%B9%8BArray/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/07/22/Promise/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Promise
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则表达式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -318,120 +335,12 @@
 
 
 
-
   
-    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-07-18T07:45:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、创建正则表达式"><a href="#一、创建正则表达式" class="headerlink" title="一、创建正则表达式"></a>一、创建正则表达式</h2><ul>
-<li>1.<strong>通过构造函数来创建</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/01.png" alt></li>
-</ul>
-<p><strong>正则有test方法，该方法用来测试字符串是否符合正则表达式的规律，如果符合，返回true</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/02.png" alt></p>
-<ul>
-<li>2.<strong>字面量 //</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/03.png" alt></li>
-</ul>
-<h2 id="二、正则的组成"><a href="#二、正则的组成" class="headerlink" title="二、正则的组成"></a>二、正则的组成</h2><ul>
-<li>1.<strong>普通字符，没有实际的含义/a/普通字母a</strong></li>
-<li>2.<strong>元字符，有实际的含义</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/04.png" alt></li>
-</ul>
-<h2 id="三、正则的优先级"><a href="#三、正则的优先级" class="headerlink" title="三、正则的优先级"></a>三、正则的优先级</h2><ul>
-<li>1.<strong>或 优先级最低 |</strong></li>
-<li>2.<strong>括号 分组的概念，优先级最高 ()</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/05.png" alt><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/06.png" alt></li>
-</ul>
-<h2 id="四、字符类的元字符"><a href="#四、字符类的元字符" class="headerlink" title="四、字符类的元字符 []"></a>四、字符类的元字符 []</h2><ul>
-<li>1.<strong>[] 表示一个字符</strong></li>
-<li>2.<strong>[] 自带或者含义</strong></li>
-<li>3.<strong>[-]  表示范围   [a-z]</strong></li>
-<li>4.<strong>[^]  表示非    [^abc]</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/07.png" alt></li>
-</ul>
-<h2 id="五、边界类元字符"><a href="#五、边界类元字符" class="headerlink" title="五、边界类元字符"></a>五、边界类元字符</h2><ul>
-<li>1.<strong>^ 开始</strong></li>
-<li>2.<strong>$ 结束</strong></li>
-<li>3.<strong>^ $ 一起使用  精确匹配，写啥匹配啥  用于表单校验中</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/08.png" alt></li>
-</ul>
-<p><strong>是不是很奇怪?为什么第三个会是false呢?</strong><br>因为一开始的^匹配的chuan是开始但是并未结束。 当匹配到后面的chuan的时候是结束但是并非开始！</p>
-<h2 id="六、量词类元字符-（顾名思义，表示数量）"><a href="#六、量词类元字符-（顾名思义，表示数量）" class="headerlink" title="六、量词类元字符 （顾名思义，表示数量）"></a>六、量词类元字符 （顾名思义，表示数量）</h2><ul>
-<li><p><strong>1.*  次数是 &gt;= 0    {0,}</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/09.png" alt></p>
-</li>
-<li><p><strong>2.+  次数是 &gt;= 1    {1,}</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/10.png" alt></p>
-</li>
-<li><p><strong>3.?  0 或者是 1     {0,1}</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/11.png" alt></p>
-</li>
-<li><p><strong>4.{m}  次数是m次</strong></p>
-</li>
-<li><p><strong>5.{m,}  次数 &gt;= m</strong></p>
-</li>
-<li><p><strong>6.{m,n}  次数 是m到n之间，包含m到n</strong></p>
-</li>
-<li><p><strong>注意！！！量词就近修饰</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/12.png" alt></p>
-</li>
-</ul>
-<h2 id="七、正则的替换"><a href="#七、正则的替换" class="headerlink" title="七、正则的替换"></a>七、正则的替换</h2><ul>
-<li><strong>1.正则替换 ==&gt; 字符串的replace方法第一个参数可以写正则</strong></li>
-<li><strong>2.字符串有replace方法可以用于替换</strong></li>
-<li><strong>3.修饰符 global  全局匹配搜索—— g</strong></li>
-<li><strong>4.修饰符 ignore  忽略大小写—— i</strong></li>
-</ul>
-<p><strong>例：</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/13.png" alt><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/14.png" alt></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -454,8 +363,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

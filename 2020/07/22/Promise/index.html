@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Promise | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、Promise基本语法new Promise( function(resolve, reject) {…} );通过创建 Promise 对象开启一个异步操作的过程，一般用几步完成多次异步操作： new Promise(fn) 返回一个Promise对象  1.在fn 中指定异步等处理 2.处理结果正常的话，调用resolve(处理结果值) 3.处理结果错误的话，调用reject(Error对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Promise">
+<meta property="og:url" content="http://yoursite.com/2020/07/22/Promise/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、Promise基本语法new Promise( function(resolve, reject) {…} );通过创建 Promise 对象开启一个异步操作的过程，一般用几步完成多次异步操作： new Promise(fn) 返回一个Promise对象  1.在fn 中指定异步等处理 2.处理结果正常的话，调用resolve(处理结果值) 3.处理结果错误的话，调用reject(Error对">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/01.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/02.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/03.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/04.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/05.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/06.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/07.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/08.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/09.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/22/Promise/10.png">
+<meta property="article:published_time" content="2020-07-22T12:27:50.000Z">
+<meta property="article:modified_time" content="2020-07-22T13:30:55.040Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/22/Promise/01.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,16 +165,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Promise" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/22/Promise/">Promise</a>
+    <h1 class="article-title" itemprop="name">
+      Promise
     </h1>
   
 
@@ -198,6 +211,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -205,16 +239,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/22/Promise/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/07/22/Promise/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/19/ES6%E4%B9%8BArray/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6之Array</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -234,204 +327,12 @@
 
 
 
-
   
-    <article id="post-ES6之Array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/19/ES6%E4%B9%8BArray/">ES6之Array</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/19/ES6%E4%B9%8BArray/" class="archive-article-date">
-  	<time datetime="2020-07-19T11:16:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、ES6之Array篇"><a href="#一、ES6之Array篇" class="headerlink" title="一、ES6之Array篇"></a>一、ES6之Array篇</h2><ul>
-<li><strong>1.数组有几种遍历模式呢?</strong><br>答:最常用用的,for循环以及forEach循环<br><img src="/2020/07/19/ES6%E4%B9%8BArray/01.png" alt><br>定义：foreach又叫做增强for循环,相当于for循环的简化版，因此在一些较复杂的循环中不适用。<br>特点：foreach在循环次数未知或者计算起来较复杂的情况下效率比for循环高。</li>
-</ul>
-<p><strong>那么他们之间都可以遍历数组，但是有什么区别呢?</strong><br>1.for循环有break和continue,但是forEach没有<br>2.foreach与for循环的明显差别在于foreach循环时循环对象（数组、集合）被锁定，不能对循环对象中的内容进行增删改操作</p>
-<ul>
-<li><strong>2. for…of</strong><br><img src="/2020/07/19/ES6%E4%B9%8BArray/02.png" alt><br>上述代码中轻松实现了数组的遍历，乍一看没有绝对它有非常强大之处。我们不得不强调下，for…of 的来历和作用。</li>
-</ul>
-<p><strong>首先看下面这个场景</strong>：<br>客户：老板给我来瓶最便宜的啤酒、最便宜的火腿肠、最便宜的打火机，多少钱？<br>商户：稍等，我算下。<br>作为程序员的我们需要考虑下数据结构，首先定一个价格对象 Price，然后为每个商品 A、B、C等定价，最后是根据用户的选择，输入系统并计算。<br><img src="/2020/07/19/ES6%E4%B9%8BArray/03.png" alt><br>然后给这个数据结构自定义遍历规则(Iterator)，希望对这个遍历之后可以输出 1.5、3、0.5<br>面对这样的数据结构，for、forEach、every、for…in 都无能为力吧？使用 for…of 就木有问题，它就是为解决这种问题而生。<br><strong>注意！for…of是支持 break、continue的，所以在功能上非常贴近原生的 for</strong></p>
-<ul>
-<li><strong>3. Array.prototype.from()</strong><br>思考：什么是伪数组?通常开发中会遇到哪些伪数组?如何将一个伪数组转换为真数组?</li>
-</ul>
-<p><strong>伪数组的定义</strong><br>1.按索引方式存储数据<br>2.具有length属性<br><strong>通常开发中会遇到哪些伪数组?</strong><br>答:function的arguments对象，还有getElementsByTagName、ele.childNodes等返回的NodeList对象，或者自定义的某些对象，这些都可以是伪数组<br><strong>在ES5中我们如何将一个伪数组转换为真数组呢?</strong><br><img src="/2020/07/19/ES6%E4%B9%8BArray/04.png" alt><br>如上图所示，在ES5中我们可以通过call方法借用数组的slice去将一个伪数组转换为真数组并返回</p>
-<p><strong>在ES6中我们可以通过Array.from()去将一个伪数组转换为真数组</strong><br><img src="/2020/07/19/ES6%E4%B9%8BArray/05.png" alt></p>
-<p><strong>难道 Array.from 只能用来将伪数组转换成数组吗，还有其他用法吗？</strong><br><strong>语法：Array.from(arrayLike,callback,thisArg)</strong><br><strong>arrayLike</strong>: 想要转换成数组的伪数组对象或可迭代对象,必填<br><strong>callback</strong>: 如果指定了该参数，新数组中的每个元素会执行该回调函数,非必填<br><strong>arrayLike</strong>: 可选参数，执行回调函数 callback 时 this 对象, 非必填<br>看了这几个参数至少能看到 Array.from 还具备 map 的功能，比如我们想初始化一个长度为 5 的数组，每个数组元素默认为 1，之前的做法是这样的:<br><img src="/2020/07/19/ES6%E4%B9%8BArray/06.png" alt><br>这样写虽然也能实现，但是用起来比较繁琐，使用 Array.from 就会简洁很多：<br><img src="/2020/07/19/ES6%E4%B9%8BArray/07.png" alt></p>
-<ul>
-<li><strong>4. Array.prototype.of()</strong></li>
-</ul>
-<p><strong>Array.of() 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。</strong><br>Array.of()和Array构造函数之间的区别在于处理整数参数：Array.of(7) 创建一个具有单个元素 7 的数组，而Array(7)创建一个长度为7的空数组(注意：这是指一个有7个空位(empty)的数组，而不是由7个undefined组成的数组)。<br><img src="/2020/07/19/ES6%E4%B9%8BArray/08.png" alt><br><strong>语法</strong>：Array.of(element0,element1, …, elementN)<br><strong>elementN</strong>：任意个参数，将按顺序成为返回数组中的元素    必填</p>
-<ul>
-<li><strong>5. Array.prototype.fill()</strong></li>
-</ul>
-<p><strong>fill() 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引</strong><br><img src="/2020/07/19/ES6%E4%B9%8BArray/09.png" alt><br>这个操作是将 array 数组的第二个元素（索引为1）到第三个元素（索引为2）内的数填充为 0，不包括第三个元素，所以结果是 [1,0,3,4]<br><strong>注意！fill 不具备遍历的功能，它是通过指定要操作的索引范围来进行，通过这道题目可以看出不指定索引会对所有元素进行操作</strong><br><strong>语法：arr.fill(value, start, end)</strong><br><strong>value</strong>: 用来填充数组元素的值, 必填<br><strong>start</strong>: 起始索引，默认值为0, 非必填<br><strong>end</strong>: 终止索引，默认值为 this.length, 非必填</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/19/ES6%E4%B9%8BArray/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-07-18T07:45:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、创建正则表达式"><a href="#一、创建正则表达式" class="headerlink" title="一、创建正则表达式"></a>一、创建正则表达式</h2><ul>
-<li>1.<strong>通过构造函数来创建</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/01.png" alt></li>
-</ul>
-<p><strong>正则有test方法，该方法用来测试字符串是否符合正则表达式的规律，如果符合，返回true</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/02.png" alt></p>
-<ul>
-<li>2.<strong>字面量 //</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/03.png" alt></li>
-</ul>
-<h2 id="二、正则的组成"><a href="#二、正则的组成" class="headerlink" title="二、正则的组成"></a>二、正则的组成</h2><ul>
-<li>1.<strong>普通字符，没有实际的含义/a/普通字母a</strong></li>
-<li>2.<strong>元字符，有实际的含义</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/04.png" alt></li>
-</ul>
-<h2 id="三、正则的优先级"><a href="#三、正则的优先级" class="headerlink" title="三、正则的优先级"></a>三、正则的优先级</h2><ul>
-<li>1.<strong>或 优先级最低 |</strong></li>
-<li>2.<strong>括号 分组的概念，优先级最高 ()</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/05.png" alt><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/06.png" alt></li>
-</ul>
-<h2 id="四、字符类的元字符"><a href="#四、字符类的元字符" class="headerlink" title="四、字符类的元字符 []"></a>四、字符类的元字符 []</h2><ul>
-<li>1.<strong>[] 表示一个字符</strong></li>
-<li>2.<strong>[] 自带或者含义</strong></li>
-<li>3.<strong>[-]  表示范围   [a-z]</strong></li>
-<li>4.<strong>[^]  表示非    [^abc]</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/07.png" alt></li>
-</ul>
-<h2 id="五、边界类元字符"><a href="#五、边界类元字符" class="headerlink" title="五、边界类元字符"></a>五、边界类元字符</h2><ul>
-<li>1.<strong>^ 开始</strong></li>
-<li>2.<strong>$ 结束</strong></li>
-<li>3.<strong>^ $ 一起使用  精确匹配，写啥匹配啥  用于表单校验中</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/08.png" alt></li>
-</ul>
-<p><strong>是不是很奇怪?为什么第三个会是false呢?</strong><br>因为一开始的^匹配的chuan是开始但是并未结束。 当匹配到后面的chuan的时候是结束但是并非开始！</p>
-<h2 id="六、量词类元字符-（顾名思义，表示数量）"><a href="#六、量词类元字符-（顾名思义，表示数量）" class="headerlink" title="六、量词类元字符 （顾名思义，表示数量）"></a>六、量词类元字符 （顾名思义，表示数量）</h2><ul>
-<li><p><strong>1.*  次数是 &gt;= 0    {0,}</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/09.png" alt></p>
-</li>
-<li><p><strong>2.+  次数是 &gt;= 1    {1,}</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/10.png" alt></p>
-</li>
-<li><p><strong>3.?  0 或者是 1     {0,1}</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/11.png" alt></p>
-</li>
-<li><p><strong>4.{m}  次数是m次</strong></p>
-</li>
-<li><p><strong>5.{m,}  次数 &gt;= m</strong></p>
-</li>
-<li><p><strong>6.{m,n}  次数 是m到n之间，包含m到n</strong></p>
-</li>
-<li><p><strong>注意！！！量词就近修饰</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/12.png" alt></p>
-</li>
-</ul>
-<h2 id="七、正则的替换"><a href="#七、正则的替换" class="headerlink" title="七、正则的替换"></a>七、正则的替换</h2><ul>
-<li><strong>1.正则替换 ==&gt; 字符串的replace方法第一个参数可以写正则</strong></li>
-<li><strong>2.字符串有replace方法可以用于替换</strong></li>
-<li><strong>3.修饰符 global  全局匹配搜索—— g</strong></li>
-<li><strong>4.修饰符 ignore  忽略大小写—— i</strong></li>
-</ul>
-<p><strong>例：</strong><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/13.png" alt><br><img src="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/14.png" alt></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -454,8 +355,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
